@@ -1,0 +1,22 @@
+{
+  "name": "medicine-drugs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aksana-Tsishchanka/medecine-drugs.git"
+  },
+  "author": "Aksana Tolstoguzova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aksana-Tsishchanka/medecine-drugs/issues"
+  },
+  "homepage": "https://github.com/Aksana-Tsishchanka/medecine-drugs#readme",
+  "dependencies": {
+    
+  }
+}

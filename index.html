@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="folder_components\normalize\normalize.css"/>
+      <link rel="stylesheet" href="folder_components\bootstrap\dist\css\bootstrap.css">
+      <link rel="stylesheet" href="assets\css\style.css"/>
+  </head>
+
+  <body ng-app="controlPanelApp">
+  <div class="container">
+      <div class="page-header">
+          <h1>Drugs and Adverse Effects <small>Extraction Tool</small></h1>
+      </div>
+
+      <form ng-controller="FormCtrl">
+          <div class="row input-control">
+              <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <input type="text" name="input" ng-model="searchValue" class="form-control" placeholder="Enter search term... or Choose file">
+              </div>
+          </div>
+          <div class="row file-input-control">
+              <fileuploader ng-model-file="fileName"></fileuploader>
+          </div>
+          <div class="row select-control">
+              <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 select-style">
+                <select ng-model="currentAction" ng-options="action.value for action in actions"></select>
+              </div>
+              <div class="col-xs-12 col-sm-3 col-md-3 col-lg-1 button-control ">
+                <button type="button" class="btn btn-lg" ng-disabled="!fileName && !searchValue" ng-click="getData(currentAction, searchValue, fileName)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
+              </div>
+          </div>
+      </form>
+      <drugs></drugs>
+  </div>
+
+
+  <script type="text/javascript" src="folder_components\angular\angular.js"></script>
+  <script type="text/javascript" src="folder_components\angular-sanitize\angular-sanitize.js"></script>
+  <script type="text/javascript" src="app\app.js"></script>
+  </body>
+</html>
+

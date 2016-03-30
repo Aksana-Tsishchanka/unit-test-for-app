@@ -1,0 +1,70 @@
+<div class="results">
+    <div class="results-header page-header" ng-show="api.text != null">
+        <h3>Input text:</h3>
+    </div>
+    <div class="highlightedText" ng-bind-html="api.text">
+    </div>
+
+    <div class="drugsComponent" ng-show="api.drugs != null">
+        <table>
+            <caption>Extracted Drugs:</caption>
+            <thead>
+                <th>Name</th>
+                <th>Dictionary</th>
+                <th>ID+URL</th>
+                <th>Score</th>
+                <th>Text chunk</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="drug in api.drugs">
+                    <td id="{{drug.name}}"></a>{{drug.name}}</td>
+                    <td>{{drug.dictionary}}</td>
+                    <td><a href="{{drug.url}}">{{drug.url}}</a></td>
+                    <td>{{drug.score}}</td>
+                    <td>{{drug.text_chunk}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="effectsComponent" ng-show="api.effects != null ">
+        <table>
+            <caption>Extracted Effects:</caption>
+            <thead>
+            <th>Name</th>
+            <th>Dictionary</th>
+            <th>ID+URL</th>
+            <th>Score</th>
+            <th>Text chunk</th>
+            </thead>
+            <tbody>
+            <tr ng-repeat="effect in api.effects">
+                <td id="{{effect.name}}">{{effect.name}}</td>
+                <td>{{effect.dictionary}}</td>
+                <td><a href="{{effect.url}}">{{effect.url}}</a></td>
+                <td>{{effect.score}}</td>
+                <td>{{effect.text_chunk}}</td>
+            </tr>
+            </tbody>
+        </table>
+   </div>
+
+        <div class="triplesComponent" ng-show="api.triples != null">
+            <table>
+                <caption>Extracted Triples:</caption>
+                <thead>
+                <th>Subject</th>
+                <th>Action</th>
+                <th>Object</th>
+                </thead>
+                <tbody>
+                <tr ng-repeat="tripl in api.triples">
+                    <td>{{tripl.subject}}</td>
+                    <td id="{{tripl.action}}">{{tripl.action}}</td>
+                    <td>{{tripl.object}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+</div>

@@ -1,0 +1,3 @@
+http://ecsc001008a4.epam.com/adverse/upload/tojson/extract?w=Velcade+is+a+cancer+medicine+that+contains+the+active+substance+bortezomib.
+
+http://ecsc001008a4.epam.com/adverse/upload/list/
